@@ -16,12 +16,9 @@ def fibo(request):
         c = a + b
         a = b
         b = c
-    end_time = time.time()
-    time_taken = int(end_time - start_time) * 1000000
-    print(end_time)
     print(start_time)
     return render(
         request,
         'end.html',
-        {'n': n, 'a': a, 'time_taken': time_taken},
+        {'n': n, 'a': a, 'time_taken': int(time.time() - start_time) * 1000},
     )
