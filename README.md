@@ -9,8 +9,8 @@ We have also calculated the time taken by API to process the request.
 However there exists an another method in Django i.e Django Middleware by which we can calculate request response time for 
 n number of request. For that we can use below code:- 
 
-import time
 
+import time
 class StatsMiddleware(object):
     def process_request(self, request):
         request.start_time = time.time()
